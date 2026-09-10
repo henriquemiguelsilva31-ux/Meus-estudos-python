@@ -1,0 +1,19 @@
+print("Vamos jogar um jogo! Eu escolho um número entre 0 e 100 e você tem que tentar adivinhar. ")
+
+import random
+numero_secreto=random.randint(1, 100)
+palpite=0
+
+tentativas=0
+
+while palpite!=numero_secreto:
+	palpite=int(input("Digite o seu palpite: "))
+	tentativas=tentativas+1
+
+	if palpite>numero_secreto:
+		print("Muito alto! Tente um número menor.")
+		
+	elif palpite<numero_secreto:
+		print(" Muito baixo! Tente um número maior.")
+		
+print("Parabéns! Você acertou em", tentativas, "tentativas!")
